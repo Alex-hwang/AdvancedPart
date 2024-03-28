@@ -20,7 +20,7 @@
 * 表明该变量是常量，只能被赋值一次
 
 ```dtd
-class Fu {
+        class Fu {
         final void show() {
         System.out.println("Fu show");
         }
