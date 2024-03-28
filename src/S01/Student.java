@@ -5,6 +5,8 @@ public class Student {
     private int age;
     private String gender;
 
+    public static String teacher = "Mr. Wang"; //静态变量
+
     public Student() {
     }
 
@@ -45,7 +47,7 @@ public class Student {
     }
 
     public void show() {
-        System.out.println(name + age + gender);
+        System.out.println(name + age + gender + teacher);
     }
 
 

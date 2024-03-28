@@ -6,6 +6,8 @@ public class test01 {
         s1.setName("John");
         s1.setAge(20);
         s1.setGender("女");
+        Student.teacher = "Mr. Li";
+
 
         s1.study();
         s1.show();
