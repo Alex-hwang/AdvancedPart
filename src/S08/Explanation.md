@@ -18,11 +18,3 @@
 * 表明该方法是最终方法，不能被重写
 * 表明该类是最终类，不能被继承
 * 表明该变量是常量，只能被赋值一次
-
-```dtd
-        class Fu {
-        final void show() {
-        System.out.println("Fu show");
-        }
-        }
-```
