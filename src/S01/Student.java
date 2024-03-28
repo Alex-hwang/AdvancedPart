@@ -5,6 +5,9 @@ public class Student {
     private int age;
     private String gender;
 
+    public Student() {
+    }
+
     public Student(String name, int age, String address) {
         this.name = name;
         this.age = age;
@@ -20,7 +23,7 @@ public class Student {
         return age;
     }
 
-    public String getAddress() {
+    public String getGender() {
         return gender;
     }
 
@@ -33,8 +36,8 @@ public class Student {
         this.age = age;
     }
 
-    public void setAddress(String address) {
-        this.gender = address;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public void study() {
