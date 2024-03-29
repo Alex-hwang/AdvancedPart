@@ -8,5 +8,13 @@ public class RegisterJFrame extends JFrame {
     public RegisterJFrame() {
         this.setSize(300, 500);
         this.setVisible(true);
+        //设置窗口的标题
+        this.setTitle("拼图游戏 注册");
+        //设置界面置顶
+        this.setAlwaysOnTop(true);
+        //设置界面居中
+        this.setLocationRelativeTo(null);
+        //设置窗口的关闭方式
+        this.setDefaultCloseOperation(3);
     }
 }
