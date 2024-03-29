@@ -17,6 +17,36 @@ public class GameJFrame extends JFrame {
         //设置窗口的关闭方式
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
+        //初始化菜单
+        //创建菜单栏
+        JMenuBar jMenuBar = new JMenuBar();
+        //创建菜单
+        JMenu FunctionJMenu = new JMenu("功能");
+        JMenu AboutJMenu = new JMenu("关于");
+        //创建菜单项
+        JMenuItem RestartItem = new JMenuItem("重新开始");
+        JMenuItem ExitItem = new JMenuItem("退出游戏");
+        JMenuItem ReloginItem = new JMenuItem("重新登录");
+        JMenuItem HelpItem = new JMenuItem("帮助");
+        JMenuItem AboutItem = new JMenuItem("关于我们");
+
+        //将菜单项添加到菜单中
+        FunctionJMenu.add(RestartItem);
+        FunctionJMenu.add(ReloginItem);
+        FunctionJMenu.add(ExitItem);
+        AboutJMenu.add(HelpItem);
+        AboutJMenu.add(AboutItem);
+
+        //将菜单添加到菜单栏中
+        jMenuBar.add(FunctionJMenu);
+        jMenuBar.add(AboutJMenu);
+
+        //将菜单栏添加到窗口中
+        this.setJMenuBar(jMenuBar);
+
+
+
+
 
         //设置窗口可见
         this.setVisible(true);
