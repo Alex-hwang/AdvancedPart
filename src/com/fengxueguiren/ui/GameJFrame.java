@@ -10,9 +10,31 @@ public class GameJFrame extends JFrame {
         JMenuBar jMenuBar = getjMenuBar();
         //将菜单栏添加到窗口中
         this.setJMenuBar(jMenuBar);
+        //初始化图片
+        initImage();
+
+
         //设置窗口可见
         this.setVisible(true);
     }
+
+    private void initImage() {
+        //初始化图片
+        //创建一个面板
+        JPanel jPanel = new JPanel();
+        //创建一个标签
+        JLabel jLabel = new JLabel();
+        //创建一个图片
+        ImageIcon imageIcon = new ImageIcon("src/com/i/image/background.png");
+        //将图片添加到标签中
+        jLabel.setIcon(imageIcon);
+        //将标签添加到面板中
+        jPanel.add(jLabel);
+        //将面板添加到窗口中
+        this.add(jPanel);
+    }
+
+
 
     private static JMenuBar getjMenuBar() {
         //初始化菜单
