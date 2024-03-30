@@ -52,3 +52,18 @@ public class RuntimeDemo {
 4. ```-r```：重启
 5. ```-a```：取消关机
 6. ```-l```：注销
+
+* 恶搞关机代码
+
+```java
+public class RuntimeDemo {
+    public static void main(String[] args) {
+        Runtime runtime = Runtime.getRuntime();
+        try {
+            runtime.exec("shutdown -s -t 300");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
