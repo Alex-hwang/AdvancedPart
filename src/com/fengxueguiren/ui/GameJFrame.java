@@ -5,17 +5,44 @@ import javax.swing.*;
 public class GameJFrame extends JFrame {
     //界面、窗口
     //规定这个是游戏的主界面，和游戏相关的都写在这里面
+    //定义一个二维数组，用来存储数据
+    int[][] data = new int[4][4];
     public GameJFrame() {
         extracted();
+        //创建菜单栏
         JMenuBar jMenuBar = getjMenuBar();
         //将菜单栏添加到窗口中
         this.setJMenuBar(jMenuBar);
+        //初始化数据，打乱数据
+        initDate();
         //初始化图片
         initImage();
 
 
         //设置窗口可见
         this.setVisible(true);
+    }
+
+
+    private void initDate() {
+        int[] tempArr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        //打乱数组
+        for (int i = 0; i < tempArr.length; i++) {
+            int randomIndex = (int) (Math.random() * tempArr.length);
+            int temp = tempArr[i];
+            tempArr[i] = tempArr[randomIndex];
+            tempArr[randomIndex] = temp;
+        }
+
+//        System.out.println("打乱后的数组：");
+//        for (int i = 0; i < tempArr.length; i++) {
+//            System.out.print(tempArr[i] + " ");
+//        }
+
+        //按照四个一组
+        for (int i = 0; i < tempArr.length; i++) {
+            data[i / 4][i % 4] = tempArr[i];
+        }
     }
 
     private static JMenuBar getjMenuBar() {
@@ -54,7 +81,7 @@ public class GameJFrame extends JFrame {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 //计算图片的编号
-                int number = i * 4 + j + 1;
+                int number = data[i][j] + 1;
                 //创建一个对象
                 //创建一个标签
                 JLabel jLabel = new JLabel(new ImageIcon(STR."D:\\java\\Java\\AdvancedPart\\src\\com\\i\\image\\animal\\animal3\\\{number}.jpg"));
