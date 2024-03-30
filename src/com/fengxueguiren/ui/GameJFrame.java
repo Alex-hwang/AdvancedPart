@@ -59,7 +59,12 @@ public class GameJFrame extends JFrame {
         JMenuItem ReloginItem = new JMenuItem("重新登录");
         JMenuItem HelpItem = new JMenuItem("帮助");
         JMenuItem AboutItem = new JMenuItem("关于我们");
-        JMenuItem OtherItem = new JMenuItem("别点");
+        JMenuItem OtherItem = new JMenuItem("别点");//设置一个趣味的菜单项，点击会进入死循环
+
+
+        //鼠标监听机制
+
+
 
         //将菜单项添加到菜单中
         FunctionJMenu.add(RestartItem);
@@ -77,7 +82,6 @@ public class GameJFrame extends JFrame {
     }
 
     private void initImage() {
-
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 //计算图片的编号
