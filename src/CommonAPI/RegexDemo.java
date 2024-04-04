@@ -29,7 +29,29 @@ public class RegexDemo {
             b = m.find();
         }
         System.out.println("中字出现的次数为：" + count);
+
+        //下面是正则表达式的一些基本规则
+        //部分匹配但是只取出来完全匹配的部分
+        String str1 = "Java的版本有：Java8、Java11、Java17";
+        String regex = "Java(?=8|11|17)";
+        Pattern pp = Pattern.compile(regex); //编译正则表达式
+        Matcher mm = pp.matcher(str1); //创建匹配器
+        while (mm.find()) {
+            System.out.println(mm.group());
+        }
+
+        //忽略大小写的匹配
+        String str2 = "Java的版本有：JAVa8、Java11、Java17";
+        String regex2 = "((?i)java)";
+        Pattern p2 = Pattern.compile(regex2);
+        Matcher m2 = p2.matcher(str2);
+        while (m2.find()) {
+            System.out.println(m2.group());
+        }
     }
+
+
+
 
 
 }
