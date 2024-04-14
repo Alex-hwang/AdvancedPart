@@ -6,6 +6,7 @@ public class ExceptionDemo1 {
         try {
             System.out.println(arr[0]);
         } catch (ArrayIndexOutOfBoundsException e) {
+            //如果没有出现异常，那么这里的代码将不会被执行
             System.out.println("Array index out of bound exception");
         }
         System.out.println("即使代码是正确的，但是下面的也会被执行而不是直接退出程序！");
